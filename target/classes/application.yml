@@ -1,2 +1,16 @@
 server:
   port: 10010
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["metrics","prometheus"]
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
